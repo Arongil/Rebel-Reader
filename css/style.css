@@ -1,0 +1,42 @@
+* {
+    font-family: sans-serif;
+}
+
+#wrapper {
+    width: 80vw;
+    height: 80vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.horizontal {
+    list-style-type: none;
+    width: 80vw;
+    height: 66vh;
+    padding: 0;
+}
+
+.horizontal li {
+    float: right;
+    width: 34vw;
+    height: 60vh;
+    margin: 1vh 1vw 1vh 1vw;
+    padding: 2vh 2vw 2vh 2vw;
+    font-size: 2vh;
+
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 1px;
+}
+
+#translate {
+    width: 74vw;
+    height: 8vh;
+    margin: 1vh 1vw 1vh 1vw;
+    padding: 2vh 2vw 2vh 2vw;
+    font-size: 2vh;
+
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 1px;
+}
