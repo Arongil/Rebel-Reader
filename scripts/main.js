@@ -51,6 +51,7 @@ const target = document.getElementById("target");
 function update() {
     source.innerHTML = getDisplayedText();
     target.innerHTML = "";
+    updateSentences();
 }
 
 // Example POST method implementation:

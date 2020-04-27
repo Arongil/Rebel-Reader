@@ -1,8 +1,8 @@
-function getSentence() {
+function getSentences() {
     var text = getDisplayedText();
-    if (text.indexOf(".") === -1 && text.indexOf("?") === -1) {
+    if (text.indexOf(".") === -1 && text.indexOf("?") === -1 && text.indexOf("!") === -1) {
         // If there's only one sentence, return everything unsplit.
-        return text;
+        return [text];
     }
     // Map '.', '?', and '!' to new sentences.
     // As an example, "Hello? Hello... Hello! Hello." --> ["Hello?", "Hello...", "Hello!", "Hello."]
@@ -12,7 +12,19 @@ function getSentence() {
         })
     });
     sentences = [].concat(...([].concat(...sentences))).map(sentence => sentence.trim()).filter(sentence => sentence !== "");
-    return sentences[Math.floor(Math.random() * sentences.length)];
+    return sentences;
+}
+
+var displayedSentences = [""], practiceIndex = 0;
+function updateSentences() {
+    displayedSentences = getSentences();
+    practiceIndex = 0;
+}
+
+function getSentence() {
+    var sentence = displayedSentences[practiceIndex];
+    practiceIndex = (practiceIndex + 1) % displayedSentences.length;
+    return sentence;
 }
 
 var sentence;

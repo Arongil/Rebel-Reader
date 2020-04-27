@@ -40,3 +40,8 @@
     outline-color: black;
     outline-width: 1px;
 }
+
+#controls {
+    margin-top: 2vh;
+    text-align: center;
+}
