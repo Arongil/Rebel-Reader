@@ -4,7 +4,7 @@
 
 #wrapper {
     width: 80vw;
-    height: 70vh;
+    height: 72vh;
     margin-left: 10vw;
     margin-right: 10vw;
 }
@@ -12,10 +12,8 @@
 .horizontal {
     list-style-type: none;
     width: 80vw;
-    height: 56vh;
     padding: 0;
 }
-
 .horizontal li {
     float: right;
 
@@ -26,6 +24,9 @@
     overflow: auto;
 }
 
+#top-boxes {
+    height: 56vh;
+}
 #top-boxes li {
     width: 34vw;
     height: 50vh;
@@ -34,6 +35,9 @@
     font-size: 2vh;
 }
 
+#bottom-boxes {
+    height: 14vh;
+}
 #bottom-boxes li {
     height: 8vh;
     margin: 1vh 1vw 1vh 1vw;
@@ -59,9 +63,6 @@
 }
 
 #languageControls {
-    margin-top: 2vh;
+    margin: 4vh 0vw 0vh 0vw;
     text-align: center;
-}
-
-#languageControls button {
 }
