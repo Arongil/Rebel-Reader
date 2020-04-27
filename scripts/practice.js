@@ -33,6 +33,7 @@ function highlight() {
     // instance will ever be chosen. This never affects the user, as it's only removing
     // randomness against equivalent sentences, which are all the same anyway.
     var parts = getDisplayedText().split(sentence);
+    // Reconstruct the passage.
     var text = parts[0] + "<strong>" + sentence + "</strong>" + parts[1];
     source.innerHTML = text;
 }

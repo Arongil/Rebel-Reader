@@ -49,8 +49,8 @@ function prev() {
 const source = document.getElementById("source");
 const target = document.getElementById("target");
 function update() {
-    source.innerHTML = getDisplayedText();
-    target.innerHTML = "";
+    source.textContent = getDisplayedText();
+    target.textContent = "";
     updateSentences();
 }
 
@@ -120,9 +120,9 @@ document.onmouseup = function() {
         postData('/translate', { text: selection }).then((translation) => {
             if (selection.split(" ").length < 5) {
                 // If the selection is shorter than 5 words, write it as X = Y.
-                translateBox.innerHTML = selection + " = " + translation.text;
+                translateBox.textContent = selection + " = " + translation.text;
             } else {
-                translateBox.innerHTML = "TRANSLATION:<br><br>" + translation.text;
+                translateBox.textContent = "TRANSLATION:<br><br>" + translation.text;
             }
         });
     }
