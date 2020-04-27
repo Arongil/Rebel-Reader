@@ -16,13 +16,22 @@
         <div id="translate"></div>
     </div>
 
-    <label for="file">Choose some text:</label><br>
-    <input type="file" name="file" id="file">
+    <div id="controls">
+        <label for="file">Choose some text:</label><br>
+        <input type="file" name="file" id="file">
+        
+        <br>
+        <label for="sourceLangSelector">What language is this text in?</label>
+        <select id="sourceLangSelector" onchange="changeLanguage();"></select>
+        <br>
+        <label for"targetLangSelector">What is your native language?</label>
+        <select id="targetLangSelector" onchange="changeLanguage();"></select>
 
-    <br><br>
-    <button onclick="next();">Next Line</button>
-    <button onclick="prev();">Prev Line</button>
-    <button onclick="practice();">Practice!</button>
+        <br>
+        <button onclick="prev();">Prev Line</button>
+        <button onclick="next();">Next Line</button>
+        <button onclick="practice();">Practice!</button>
+    </div>
 
     <!-- <script src="scripts/translate.js"></script> -->
     <script src="scripts/main.js"></script>

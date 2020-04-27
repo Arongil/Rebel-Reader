@@ -72,6 +72,37 @@ async function postData(url = '', data = {}) {
   return response.json(); // parses JSON response into native JavaScript objects
 }
 
+const sourceLangSelector = document.getElementById("sourceLangSelector");
+const targetLangSelector = document.getElementById("targetLangSelector");
+const supportedLanguages = {
+    'English': 'en',
+    'Spanish': 'es',
+    'French': 'fr',
+    'Italian': 'it',
+    'German': 'de',
+    'Russian': 'ru'
+};
+// Initialize the options in the selectors.
+var keys = Object.keys(supportedLanguages), key;
+for (i in keys) {
+    key = keys[i];
+    sourceLangSelector.innerHTML += "<option value='" + supportedLanguages[key] + "'>" + key + "</option>";
+    targetLangSelector.innerHTML += "<option value='" + supportedLanguages[key] + "'>" + key + "</option>";
+}
+sourceLangSelector.value = 'es';
+targetLangSelector.value = 'en';
+function changeLanguage() {
+    const sourceLanguage = sourceLangSelector.value.toString();
+    const targetLanguage = targetLangSelector.value.toString();
+    const values = Object.values(supportedLanguages);
+    if (values.indexOf(sourceLanguage) === -1 || values.indexOf(targetLanguage) === -1) {
+        // Must have valid source-target pair.
+        return;
+    }
+    postData('/change-language', { sourceLang: sourceLanguage, targetLang: targetLanguage });
+}
+
+
 function getSelectionText() {
     if (window.getSelection) {
         return window.getSelection().toString();

@@ -20,11 +20,15 @@ app.listen(process.env.port || 3000);
 console.log('Running at Port 3000');
 
 const translate = require('@vitalets/google-translate-api');
+var sourceLang = 'es', targetLang = 'en';
 
-// translate('Mr. and Mrs. Dursley, of number four, Privet Drive, were proud to say that they were perfectly normal, thank you very much. They were the last people you\'d expect to be involved in anything strange or mysterious, because they just didn\'t hold with such nonsense.', {from: 'en', to: 'de'}).then(res => { console.log(res.text); });
+app.post('/change-language', (req, res) => {
+    sourceLang = req.body.sourceLang;
+    targetLang = req.body.targetLang;
+});
 
 app.post('/translate', (req, res) => {
-    translate(req.body.text, {from: 'es', to: 'en'}).then( (translation) => {
+    translate(req.body.text, {from: sourceLang, to: targetLang}).then( (translation) => {
         res.send(translation);
     });
 });

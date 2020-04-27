@@ -4,11 +4,12 @@ function getSentence() {
         // If there's only one sentence, return everything unsplit.
         return text;
     }
-    // Map periods, question marks, and exclamation marks to new sentences.
-    // As an example, "Hello? Hello! Hello." --> ["Hello?", "Hello!", "Hello."]
-    var sentences = text.split(".").map( (block, i, arr) => block + (i < arr.length - 1 ? "." : "") ).map( block => {
-        return block.split("!").map( (block, i, arr) => block + (i < arr.length - 1 ? "!" : "") ).map( block => {
-            return block.split("?").map( (block, i, arr) => block + (i < arr.length - 1 ? "?" : "") )})
+    // Map '.', '?', and '!' to new sentences.
+    // As an example, "Hello? Hello... Hello! Hello." --> ["Hello?", "Hello...", "Hello!", "Hello."]
+    var sentences = text.split(". ").map( (block, i, arr) => block + (i < arr.length - 1 ? ". " : "") ).map( block => {
+        return block.split("! ").map( (block, i, arr) => block + (i < arr.length - 1 ? "! " : "") ).map( block => {
+            return block.split("? ").map( (block, i, arr) => block + (i < arr.length - 1 ? "? " : "") )
+        })
     });
     sentences = [].concat(...([].concat(...sentences))).map(sentence => sentence.trim()).filter(sentence => sentence !== "");
     return sentences[Math.floor(Math.random() * sentences.length)];
@@ -39,7 +40,7 @@ function createWorkspace() {
     target.innerHTML += "<br><br>";
     target.innerHTML += "<textarea rows='4' cols='50' id='translation-attempt'></textarea>";
     target.innerHTML += "<br><br>";
-    target.innerHTML += "<p>When you're done, check out how we did it:</p";
+    target.innerHTML += "<p>When you're done, check out how Google does it:</p";
     target.innerHTML += "<button onclick='revealTranslation();'>Press Me!</button>";
 }
 
