@@ -4,7 +4,7 @@
 
 #wrapper {
     width: 80vw;
-    height: 80vh;
+    height: 70vh;
     margin-left: 10vw;
     margin-right: 10vw;
 }
@@ -12,14 +12,14 @@
 .horizontal {
     list-style-type: none;
     width: 80vw;
-    height: 66vh;
+    height: 56vh;
     padding: 0;
 }
 
 .horizontal li {
     float: right;
     width: 34vw;
-    height: 60vh;
+    height: 50vh;
     margin: 1vh 1vw 1vh 1vw;
     padding: 2vh 2vw 2vh 2vw;
     font-size: 2vh;
@@ -44,4 +44,10 @@
 #controls {
     margin-top: 2vh;
     text-align: center;
+}
+
+#controls button {
+    width: 10vw;
+    height: 6vh;
+    font-size: 3vh;
 }

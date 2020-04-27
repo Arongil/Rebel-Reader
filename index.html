@@ -13,24 +13,25 @@
             <li id="target">sdr</li>
             <li id="source">jfd</li>
         </ul>
-        <div id="translate"></div>
+        <div id="translate">Highlight words to see them translated here!</div>
     </div>
 
     <div id="controls">
+        <br>
+        <button onclick="prev();">Prev Line</button>
+        <button onclick="next();">Next Line</button>
+        <button onclick="practice();">Practice!</button>
+
+        <br><br>
         <label for="file">Choose some text:</label>
         <input type="file" name="file" id="file">
         
-        <br>
+        <br><br>
         <label for="sourceLangSelector">What language is this text in?</label>
         <select id="sourceLangSelector" onchange="changeLanguage();"></select>
         <br>
         <label for"targetLangSelector">What is your native language?</label>
         <select id="targetLangSelector" onchange="changeLanguage();"></select>
-
-        <br>
-        <button onclick="prev();">Prev Line</button>
-        <button onclick="next();">Next Line</button>
-        <button onclick="practice();">Practice!</button>
     </div>
 
     <!-- <script src="scripts/translate.js"></script> -->
