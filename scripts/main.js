@@ -120,9 +120,9 @@ document.onmouseup = function() {
         postData('/translate', { text: selection }).then((translation) => {
             if (selection.split(" ").length < 5) {
                 // If the selection is shorter than 5 words, write it as X = Y.
-                translateBox.textContent = selection + " = " + translation.text;
+                translateBox.innerHTML = selection + " = " + translation.text;
             } else {
-                translateBox.textContent = "TRANSLATION:<br><br>" + translation.text;
+                translateBox.innerHTML = "TRANSLATION:<br><br>" + translation.text;
             }
         });
     }
