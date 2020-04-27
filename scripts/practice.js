@@ -47,8 +47,9 @@ function revealTranslation() {
 }
 
 function createWorkspace() {
+    var targetLanguage = Object.keys(supportedLanguages).filter( lang => supportedLanguages[lang] == targetLangSelector.value.toString() )[0];
     target.innerHTML = "";
-    target.innerHTML += "<strong>Write the highlighted sentence in English!</strong>";
+    target.innerHTML += "<strong>Write the highlighted sentence in " + targetLanguage + "!</strong>";
     target.innerHTML += "<br><br>";
     target.innerHTML += "<textarea rows='4' cols='50' id='translation-attempt'></textarea>";
     target.innerHTML += "<br><br>";

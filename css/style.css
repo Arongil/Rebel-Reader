@@ -18,40 +18,50 @@
 
 .horizontal li {
     float: right;
+
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 1px;
+
+    overflow: auto;
+}
+
+#top-boxes li {
     width: 34vw;
     height: 50vh;
     margin: 1vh 1vw 1vh 1vw;
     padding: 2vh 2vw 2vh 2vw;
     font-size: 2vh;
+}
 
-    outline-style: solid;
-    outline-color: black;
-    outline-width: 1px;
-
-    overflow: auto;
+#bottom-boxes li {
+    height: 8vh;
+    margin: 1vh 1vw 1vh 1vw;
+    font-size: 2vh;
 }
 
 #translate {
-    width: 74vw;
-    height: 8vh;
-    margin: 1vh 1vw 1vh 1vw;
+    width: 34vw;
     padding: 2vh 2vw 2vh 2vw;
-    font-size: 2vh;
-
-    outline-style: solid;
-    outline-color: black;
-    outline-width: 1px;
-
-    overflow: auto;
 }
 
-#controls {
+#buttonControls {
+    width: 38vw;
+    padding: 2vh 0vw 2vh 0vw;
+    outline-style: none;
+    text-align: center;
+}
+
+#buttonControls button {
+    width: 12vw;
+    height: 8vh;
+    font-size: 3vh;
+}
+
+#languageControls {
     margin-top: 2vh;
     text-align: center;
 }
 
-#controls button {
-    width: 10vw;
-    height: 6vh;
-    font-size: 3vh;
+#languageControls button {
 }

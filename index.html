@@ -9,19 +9,21 @@
 <body>
 
     <div id="wrapper">
-        <ul class="horizontal">
+        <ul class="horizontal" id="top-boxes">
             <li id="target">2. When you're ready, click the "Practice!" button.</li>
             <li id="source">1. Begin by choosing a text to read using the button below.</li>
         </ul>
-        <div id="translate">3. Highlight words to see them translated here.</div>
+        <ul class="horizontal" id="bottom-boxes">
+            <li id="buttonControls">
+                <button onclick="prev();">Prev Line</button>
+                <button onclick="next();">Next Line</button>
+                <button onclick="practice();">Practice!</button>
+            </li>
+            <li id="translate">3. Highlight words to see them translated here.</li>
+        </ul>
     </div>
 
-    <div id="controls">
-        <br>
-        <button onclick="prev();">Prev Line</button>
-        <button onclick="next();">Next Line</button>
-        <button onclick="practice();">Practice!</button>
-
+    <div id="languageControls">
         <br><br>
         <label for="file">Choose a text to read:</label>
         <input type="file" name="file" id="file">
