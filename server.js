@@ -35,7 +35,7 @@ app.post('/translate', (req, res) => {
 });
 
 // Pdf to txt POST
-/*
+/* Would need to run 'npm install pdf-text' to do this
 const pdfText = require('pdf-text');
 const fs = require('fs');
 
