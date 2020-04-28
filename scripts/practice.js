@@ -43,6 +43,7 @@ function revealTranslation() {
     // Get example translation by Google.
     postData('/translate', { text: sentence }).then((translation) => {
         target.innerHTML += "<br><br>" + translation.text;
+        target.innerHTML += "<br><br><button onclick='practice()'>Next Sentence</button>";
         document.getElementById('translation-attempt').value = attemptedTranslation;
     });
 }

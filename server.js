@@ -19,6 +19,7 @@ app.listen(process.env.port || 3000);
 
 console.log('Running at Port 3000');
 
+// Translation POST
 const translate = require('@vitalets/google-translate-api');
 var sourceLang = 'es', targetLang = 'en';
 
@@ -32,3 +33,15 @@ app.post('/translate', (req, res) => {
         res.send(translation);
     });
 });
+
+// Pdf to txt POST
+/*
+const pdfText = require('pdf-text');
+const fs = require('fs');
+
+app.post('/pdf-to-text', (req, res) => {
+    pdfText(JSON.parse(req.body.pdf), (err, chunks) => {
+        res.send(chunks);
+    });
+});
+*/
