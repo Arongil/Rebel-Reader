@@ -42,6 +42,7 @@ function revealTranslation() {
     attemptedTranslation = document.getElementById('translation-attempt').value;
     // Get example translation by Google.
     postData('/translate', { text: sentence }).then((translation) => {
+        createWorkspace();
         target.innerHTML += "<br><br>" + translation.text;
         target.innerHTML += "<br><br><button onclick='practice()'>Next Sentence</button>";
         document.getElementById('translation-attempt').value = attemptedTranslation;
