@@ -57,7 +57,7 @@ const supportedLanguages = {
     'French': 'fr',
     'Italian': 'it',
     'German': 'de',
-    'Russian': 'ru'
+    'Russian': 'ru',
 };
 // Initialize the options in the selectors.
 var keys = Object.keys(supportedLanguages), key;
