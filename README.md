@@ -27,6 +27,10 @@ Visit `localhost:3000` on a browser. You're all set up.
 
 Enjoy seamless learning!
 
+## Hosting
+
+The web app is hosted with Heroku. To deploy the latest version, press "Deploy Branch" under "Manual Deploy" in the Heroku Dashboard. One common use case is if the Google Translate API needs to be updated to the latest version. To fix this, update `package.json` to require the latest version. Then run `npm install` to update `package-lock.json`. Before committing changes to the master branch, test to be sure the app works. Then run a manual deploy to complete the update cycle.
+
 ## License
 
 MIT
